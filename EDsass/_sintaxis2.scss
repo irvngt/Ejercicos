@@ -1,0 +1,33 @@
+// Los archivos partial son archivas scss que no se compilan al final y se declaras con guin bajo al pricipio de el nombre del archivo ( _partial.scss ) 
+
+
+.link{ //shorhands anidando propiedades poniendo ':'
+  font: {
+    size:1.4em;
+    family: 'Arial';
+    weight: 200;
+  }
+}
+
+.banner{  //multipels backgrounds con shorhands
+  $an: 400px;
+  $h: $an * 0.75;
+  width: $an;
+  height: $h;
+  background: {
+    image:url(fondo.jpg),
+          url(share.jpg),
+          url(casa.png);
+    size: $an *0.1,
+          $h *0.5,
+          cover;
+    repeat: no-repeat;
+  }
+
+  animation: {
+    name:flotar;
+    duration:2s;
+    timing-function: linear;
+  } //en algunos casos no es bueno aplicarlo 
+  animation: flotar 2s linear;
+}

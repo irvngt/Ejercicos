@@ -1,0 +1,55 @@
+
+.button{
+  $fuente-uno:3em; // variable solo en el scope  del bloque .button
+  display: inline; 
+  background: #000;
+  &:hover{ // & repite al padre, en este caso .button 
+    background: #000000;
+  }
+  &__item{ //selectores complejos *
+    font-size: 20px;
+    margin-top: inherit;
+    font-size: $fuente-uno;
+  }
+  &-secondary{
+    font-size: $fuente-uno*2;
+  }
+
+}
+
+//tenemos la classe widget y queremos que en el footer tenga otros estilos ese mismo widget  
+.widget{
+  margin: 0;
+  footer &{  /*el & repite el padre .widget*/
+    margin-top: 1em; 
+  }
+}
+
+.menu{ //se repite al padre con la coma como en css  
+  &, ul{
+    list-style: none;
+  }
+}
+
+.button{  //que todos los 'a' con class .button , hay que interpolar el &
+  color: green;
+   a#{&}{
+    color: red;
+   }
+}
+
+.menu-foo{
+  $menu-bg:rgb(30, 109, 89);
+
+  @at-root .icon-menu{ //'@at-root' toma porpiedades en este caso la variable del padre pero lo compila fuera del scope como elemnto independiente  
+    color:$menu-bg
+  }
+}
+
+
+
+
+	
+
+
+
