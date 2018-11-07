@@ -46,4 +46,45 @@
           animation-timing-function: linear;
   -webkit-animation: flotar 2s linear;
           animation: flotar 2s linear; }
+
+/* Tipos de datos */
+.data {
+  type: number; }
+
+.data-string {
+  type: string;
+  type2: list; }
+
+.data-string-num {
+  type: number;
+  width: 50px;
+  values: 100px; }
+
+.data-color {
+  type: color;
+  value: #fff; }
+
+.data-bool {
+  type: bool;
+  value: true; }
+
+.data-null {
+  type: null; }
+
+.data-list {
+  type: list;
+  value: 1 23, 45 6;
+  length: 2; }
+
+.data-map {
+  type: map;
+  value: blue; }
+  .data-map .facebook {
+    background-color: blue; }
+  .data-map .twitter {
+    background-color: #588cbd; }
+  .data-map .youtube {
+    background-color: red; }
+  .data-map .instagram {
+    background-color: salmon; }
 /*# sourceMappingURL=estilos.css.map */

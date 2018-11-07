@@ -1,6 +1,5 @@
 // Los archivos partial son archivas scss que no se compilan al final y se declaras con guin bajo al pricipio de el nombre del archivo ( _partial.scss ) 
 
-
 .link{ //shorhands anidando propiedades poniendo ':'
   font: {
     size:1.4em;
@@ -31,3 +30,80 @@
   } //en algunos casos no es bueno aplicarlo 
   animation: flotar 2s linear;
 }
+
+
+/* Tipos de datos */
+
+//Numeros 
+.data{
+  $var:100px;
+  type: type-of($var);
+}
+
+//String
+.data-string{
+  $var:HOLA;
+  $var2:hola mundo;
+  type: type-of($var);
+  type2: type-of($var2);
+}
+  //concatenar numbers con strings
+  .data-string-num{
+    $number:100;
+    $numberU: $number * 1px;
+    type: type-of($numberU);
+    width: $numberU/2;
+    values:$numberU;
+  }
+
+  //colors
+  .data-color{
+    $varC:#fff;
+    type:type-of($varC);
+    value: $varC;
+  }
+
+
+  //Booleans
+  .data-bool{
+    $var:10 > 5;
+    type: type-of($var);
+    value:$var;
+  }
+
+  //Null
+  .data-null{
+    $var:null;
+    type:type-of($var);
+    value:$var;
+  }
+
+  //List
+
+  .data-list{ //separar por comas hace que la lista tome la coma 
+    $var: 1 23, 45 6;
+    type:type-of($var);
+     value:$var;
+     length:length($var);
+     $first-value:nth($var,1);
+     $second-value:nth($var,2);
+  }
+
+  //Maps
+  .data-map{
+    $social-color:(
+      facebook: blue,
+      twitter: rgb(88, 140, 189),
+      youtube: red,
+      instagram:salmon
+    );
+    type: type-of($social-color);
+    value: map-get($social-color,facebook);
+
+
+    @each $social, $color in  $social-color{
+      & .#{$social}{
+        background-color: $color;
+      }
+    }
+  }
