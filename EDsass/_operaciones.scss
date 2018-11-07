@@ -1,0 +1,47 @@
+
+//adicion o concatenacion: +
+//resta - (poner espacios)
+//modulo - (resto de una division) %
+//comparaciones - (>, <, >=, <=, ==, !=)
+//operadores logicos - (and, or)
+/* Operaciones */
+.div{ //resta
+  $a:55;
+  $b:-43;
+  width: 5 -3;
+  width: $a - +$b;
+}
+
+//division
+.di2{ 
+  $a:13px;
+  $b:4px;
+  width: $a / $b;
+  width: #{$a} / #{$b}; // interpolacion
+}
+
+
+//comparaciones y operadores
+.div3{
+  $a:5px;
+  //@if type-of($a) == string{ (no devuelve nada)
+  @if type-of($a) == number and $a > 1px{
+    p:type-of($a);
+  }@else{
+    type:Not a number
+  }
+}
+
+/* Interpolacion */
+
+//se usan para construir expreciones on el valor de una variable
+$var:2;
+$colect:webd;
+div .#{$colect}:nth-child(#{$var}){
+  background: rebeccapurple;
+  &:before{
+    content: 'Bienvenido a #{$colect}'
+  }
+}
+
+

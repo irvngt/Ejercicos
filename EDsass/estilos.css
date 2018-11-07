@@ -87,4 +87,22 @@
     background-color: red; }
   .data-map .instagram {
     background-color: salmon; }
+
+/* Operaciones */
+.div {
+  width: 5 -3;
+  width: 98; }
+
+.di2 {
+  width: 3.25;
+  width: 13px / 4px; }
+
+.div3 {
+  p: number; }
+
+/* Interpolacion */
+div .webd:nth-child(2) {
+  background: rebeccapurple; }
+  div .webd:nth-child(2):before {
+    content: "Bienvenido a webd"; }
 /*# sourceMappingURL=estilos.css.map */
