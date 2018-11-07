@@ -105,4 +105,16 @@ div .webd:nth-child(2) {
   background: rebeccapurple; }
   div .webd:nth-child(2):before {
     content: "Bienvenido a webd"; }
+
+/* Placeholder */
+.boton1, .boton2, .boton3 {
+  margin: 0 auto;
+  color: palegreen;
+  font-size: 1.5vw; }
+
+.boton1 {
+  background: green; }
+
+.boton2 {
+  background: blue; }
 /*# sourceMappingURL=estilos.css.map */

@@ -1,0 +1,23 @@
+/* Placeholder */
+// Placeholder es un bloque de codigo pero no se compila en el css y se guardan los estilos para cuando se necesitan en scss 
+
+%placeholder{ //reutilizamos código
+  margin: 0 auto;
+  color: palegreen;
+  font-size: 1.5vw;
+}
+
+@mixin placeholder2($color){//con el mixin podemos variar propiedades
+  background: $color;
+}
+.boton1{
+  @extend %placeholder; 
+  @include placeholder2(green);
+}
+.boton2{
+  @extend %placeholder; 
+  @include placeholder2(blue);
+}
+.boton3{
+  @extend %placeholder; 
+}
