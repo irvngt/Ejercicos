@@ -46,15 +46,13 @@ $shadows:1px solid red, 2px dashed pink, 3px dotted black;
 
 @mixin menu(){
   list-style: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   @content;//puedes crear nuevo bloque css puedes pasar mas estilos al mixin
-=======
+
   @content;// puedes crear nuevo bloque css
->>>>>>> a18e43479a678599b4d5962bdf9a68b0a6d78656
-=======
+
   @content;// puedes crear nuevo bloque css
->>>>>>> a18e43479a678599b4d5962bdf9a68b0a6d78656
+
 }
 .menu-class{
   @include menu{
