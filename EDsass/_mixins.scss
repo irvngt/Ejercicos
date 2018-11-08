@@ -1,0 +1,58 @@
+/* MIXINS */
+//definir mixins 
+@mixin first-mixin($lineh,$fontz,$display:inline-block){
+//codigo mixin
+display: $display;
+line-height: $lineh;
+padding: $fontz;
+}
+.card{
+  @include first-mixin(2, 1.5em); //el tecer parametro lo toma del mixin final 'display:inline-block'
+  & .small{
+    @include first-mixin(1,.8em);
+  }
+
+  /* & .small-descriptiva{
+    @include first-mixin($line-h:1,
+                         $font-z:.8em,
+                         $margin-t: .4em,
+                         $bg-card: red);
+  } */
+}
+
+
+@mixin widget ($padd, $head-font, $head-color){ //anidado
+  display: block;
+  padding: $padd;
+  @at-root{ //raiz 
+    header#{&}{ //interpolacion header sea padre y no hijo
+    font-family: $head-font;
+    color: $head-color;
+    }
+  } 
+}
+.widget-class{
+  @include widget(1.5em, arial, blue);
+}
+
+$shadows:1px solid red, 2px dashed pink, 3px dotted black;
+@mixin multiple($box-shadow...){ //multiples argumentos
+  box-shadow: $box-shadow;  
+}
+.box{
+  /* @include multiple (1px solid red, 2px dashed pink); */
+  @include multiple ($shadows);
+}
+
+@mixin menu(){
+  list-style: none;
+  @content;// puedes crear nuevo bloque css
+}
+.menu-class{
+  @include menu{
+    li{
+      float:right ;
+    }
+  }
+}
+

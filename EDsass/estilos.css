@@ -117,4 +117,37 @@ div .webd:nth-child(2) {
 
 .boton2 {
   background: blue; }
+
+/* MIXINS */
+.card {
+  display: inline-block;
+  line-height: 2;
+  padding: 1.5em;
+  /* & .small-descriptiva{
+    @include first-mixin($line-h:1,
+                         $font-z:.8em,
+                         $margin-t: .4em,
+                         $bg-card: red);
+  } */ }
+  .card .small {
+    display: inline-block;
+    line-height: 1;
+    padding: 0.8em; }
+
+.widget-class {
+  display: block;
+  padding: 1.5em; }
+  header.widget-class {
+    font-family: arial;
+    color: blue; }
+
+.box {
+  /* @include multiple (1px solid red, 2px dashed pink); */
+  -webkit-box-shadow: 1px solid red, 2px dashed pink, 3px dotted black;
+          box-shadow: 1px solid red, 2px dashed pink, 3px dotted black; }
+
+.menu-class {
+  list-style: none; }
+  .menu-class li {
+    float: right; }
 /*# sourceMappingURL=estilos.css.map */
