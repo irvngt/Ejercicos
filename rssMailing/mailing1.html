@@ -1,0 +1,44 @@
+<style type="text/css">@import url('https://fonts.googleapis.com/css?family=Cormorant:500|Montserrat&display=swap');
+*{
+font-family: 'Montserrat', san-serif;
+}
+a{
+text-decoration: none;
+color:#cdb689; 
+font-family: 'Cormorant', serif;
+}
+
+h2 {
+ font-size:35px;
+ line-height: 100%;
+}
+hr{
+border-top: 2px dashed #cdb689;
+}
+
+
+.rssSubTitle{
+font-size:12px;
+}
+#gplusone-8ce8f98b,#gplusone-9cd59988,#gplusone-74bcab03,#gplusone-744ef3d5{
+display: none;
+}
+</style>
+
+<!-- date format https://www.php.net/manual/es/function.date.php -->
+<h1 class="null"><span style="font-family:playfair display,georgia,times new roman,serif">webdesignrs News *|DATE:F o|*</span></h1> 
+
+<!-- Show the firts item to feed Blog -->
+<hr />*|RSSITEMS:|*
+<h2><a href="*|RSSITEM:URL|*" target="_blank">*|RSSITEM:TITLE|*</a></h2>
+*|RSSITEM:IMAGE|*
+
+<section>*|RSSITEM:CONTENT|*</section>
+<a href="*|RSSITEM:URL|*" target="_blank">Read More &raquo;</a> *|END:RSSITEMS|*
+
+
+<!-- show the category, image, counts and extraxt to specific item -->
+<div class="itemrss">
+    *|FEED:http://silabadesal.mx/feed/[$count=1,$constrain_rss_img=Y,$category=art]|*<br />
+    *|FEEDITEM:LIKE|* &nbsp;
+</div>
