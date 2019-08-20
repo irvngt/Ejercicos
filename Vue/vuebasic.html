@@ -9,9 +9,19 @@
 <body>
     
 <div id="app">
-    <!-- reactividad o data binding -->
-    <input type="text"v-model="enlace">
-    <a v-bind:href="enlace">{{enlace}}</a>
+    <!-- reactividad o data binding 
+        v-bind:attr ó :attr (hace a los atributos dinamicos )    
+    -->
+    <!-- <input type="text"v-model="enlace">
+    <a v-bind:href="enlace">{{enlace}}</a> -->
+
+    <input v-model="ancho" type="range">Ancho
+    <input v-model="altura" type="range">Alto <br>
+
+    
+    <img :src="urlcompleta" alt="">
+    <br>
+    {{urlcompleta}}
 </div>
 
 </body>
@@ -20,7 +30,15 @@
     const app= new Vue({
         el: "#app",
         data:{
-            enlace: "https://www.webdesignrs.com/profile"
+            enlace: "https://www.webdesignrs.com/profile",
+            baseurl: "http://placekitten.com",
+            altura:50,
+            ancho:50
+        },
+        computed:{
+            urlcompleta(){
+                return `${this.baseurl}/${this.ancho*3}/${this.altura*3}`;
+            }
         }
     });
     Vue.config.devtools = true;
