@@ -9,9 +9,12 @@
 <body>
 
 	<div id="app">
+		 <input type="range" v-model="tiempo">{{ tiempo }}
+		 <br>
+		 <input type="search" v-model="busqueda" placeholder="Busqueda">
 		<p v-for="(datos , prop) in users">{{datos}} : {{prop}}</p>
 		<hr>
-		<li v-for="(tarea, index) in tareas">{{tarea.nombre}} - {{index}}</li>
+		<li v-for="tarea in flitroTareas"> {{tarea.nombre}} - {{tarea.tiempo}}</li>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	
@@ -19,21 +22,31 @@
 		new Vue({
 			el:"#app",
 			data:{
+				tiempo: 0,
+				busqueda:'', //propiedad con string vacia 
 				users:{
 					username:"irving",
 					role:"admin"
 				},
 				tareas: [
 					{nombre: 'Aprender JavaScript moderno', tiempo: 3},
-					{nombre: 'Aprender Vue.js', tiempo: 7},
-					{nombre: 'Reparar el coche', tiempo: 22},
-					{nombre: 'Viajar más', tiempo: 16},
-					{nombre: 'Comprar la cena', tiempo: 12},
+					{nombre: 'Aprender Vue.js', tiempo: 17},
+					{nombre: 'Reparar el coche', tiempo: 62},
+					{nombre: 'Viajar más', tiempo: 66},
+					{nombre: 'Comprar la cena', tiempo: 82},
 					{nombre: 'Mejorar como desarrollador', tiempo: 9},
-					{nombre: 'Dar un curso', tiempo: 14}
+					{nombre: 'Dar un curso', tiempo: 34}
 				],
 			},
+			computed:{
+				flitroTareas() {
+					return this.tareas.filter(tarea => { //filtran las tareas 
+						return tarea.tiempo <= this.tiempo && tarea.nombre.includes(this.busqueda);  //test de validcion menor o igual a this.tiempo
+					})
+				}
+			}
 		});
+		Vue.config.devtools = true;
 	</script>
 </body>
 </html>
