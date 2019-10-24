@@ -9,14 +9,14 @@
 <body>
 
 	<div id="app">
-			<form>
-					<input type="text" v-model="nuevaTarea" placeholder="Tarea"
-									@keyUp="guardarTarea"> <!-- @ = v-on: -->
-					<input type="submit" value="Guardar tarea">
-			</form>
-		 <input type="range" v-model="tiempo">{{ tiempo }}
-		 <br>
-		 <input type="search" v-model="busqueda" placeholder="Busqueda">
+		<form>
+			<input type="text" v-model="nuevaTarea" placeholder="Tarea"
+				@keyUp="guardarTarea"> <!-- @ = v-on: -->
+			<input type="submit" value="Guardar tarea">
+		</form>
+		<input type="range" v-model="tiempo">{{ tiempo }}
+		<br>
+		<input type="search" v-model="busqueda" placeholder="Busqueda">
 		<p v-for="(datos , prop) in users">{{datos}} : {{prop}}</p>
 		<hr>
 		<li v-for="tarea in flitroTareas"> {{tarea.nombre}} - {{tarea.tiempo}}</li>
