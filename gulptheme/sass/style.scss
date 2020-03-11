@@ -1,0 +1,30 @@
+/*!
+ Theme Name: Gulp tema
+
+Author: Irving Mendoza
+Author URI: https://webdesignrs.com/profile
+Description: Tema con gulp 4
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: news, investigacion, blog, test,
+Text Domain: gulptheme
+*/
+
+:root{
+    --maincolor1:#ff3c41;
+    --miancolor2:#181818;
+    --maincolor3:#5b5b5b;
+
+
+    --font1: 'Merriweather', serif;
+    --font2: 'Muli', sans-serif ;
+
+}
+
+
+@import "fullpage";
+@import "header";
+@import "content";
+@import "footer";
+

@@ -1,0 +1,71 @@
+/* ------------------------- */
+/* notas */
+/* ------------------------- */
+.notas article { 
+    background-position: center;
+    background-size: cover;
+}
+
+.notas article:nth-child(1) {
+    background-image: url('https://source.unsplash.com/1950x1300/?fashion');
+}
+
+.notas article:nth-child(2) {
+    background-image: url('https://source.unsplash.com/1950x1300/?nature');
+}
+
+.notas article:nth-child(3) {
+    background-image: url('https://source.unsplash.com/1950x1300/?water');
+}
+
+.notas .informacion-producto {
+    margin: 0 30px;
+}
+
+.notas .informacion-producto::before {
+    content: "";
+    height: 50px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 50%;
+    margin: -10px;
+}
+
+.notas .modelo {
+    font-size: 45px;
+}
+
+.notas .descripcion {
+    font-size: 22px;
+}
+
+.notas .precio {
+    font-size: 25px;
+}
+
+.notas .precio::before {
+    content: "$";
+    display: inline-block;
+}
+
+/* ------------------------- */
+/* Clases de fullpage.js - Flechas de Slide */
+/* ------------------------- */
+.fp-controlArrow.fp-next,
+.fp-controlArrow.fp-prev {
+    top: 95%;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 80%;
+    border-width: 20px 20px 20px 0;
+    border-color: transparent #000 transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 50px;
+    border-width: 20px 0 20px 20px;
+    border-color: transparent transparent transparent #000;
+}
