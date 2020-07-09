@@ -9,16 +9,16 @@
 		<meta name="author" content="Irving Mendoza" />
 		<link rel="stylesheet" type="text/css" href="css/base.css?v=33" />
 <!-- Hotjar Tracking Code for http://www.webdesignrs.com/profile/ -->
-<!-- <script async>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:1352916,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script> -->
+<script>
+	(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:1352916,hjsv:6};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+	})(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151449400-1"></script>
@@ -67,11 +67,15 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 					</div>
 				</div><!-- /frame__title-wrap -->
 				<div class="frame__links">
+					<a class="youtube" data-hover href="https://www.linkedin.com/in/luismn" target="_blank" ><i class="fab fa-linkedin"></i></a>
+					<a class="youtube" data-hover href="https://github.com/luisngt"  target="_blank"><i class="fab fa-github"></i></a>
+					<a class="youtube" data-hover href="https://dribbble.com/irvingmn" target="_blank" ><i class="fab fa-dribbble"></i></a>
 						<a class="youtube" data-hover href="https://www.youtube.com/channel/UCw-_ashOb6EUJ6RjdhYn1Vw" target="_blank"><i class="fab fa-youtube"></i></a>
 						<a class="youtube" data-hover href="https://codepen.io/luisngt/pens/public" target="_blank"><i class="fab fa-codepen"></i></a>
 						<a class="youtube" data-hover href="https://www.facebook.com/interwebdesign" target="_blank" ><i class="fab fa-facebook"></i></a>
-						<a class="youtube" data-hover href="https://github.com/luisngt"  target="_blank"><i class="fab fa-github"></i></a>
-						<a class="youtube" data-hover href="https://www.linkedin.com/in/luismn" target="_blank" ><i class="fab fa-linkedin"></i></a>
+						
+						
+						
 				</div>
 				<!-- <div class="index" data-hover><a href="#icon-arrow"></a></a><use xlink:href="#icon-arrow">INICIO</use></div> -->
 			</div><!--/frame-->
@@ -91,7 +95,7 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 						<div class="slide__figure-img" style="background-image: url(img/edgetech2.jpg);background-size: 100%;"></div>
 					</div>
 					<div class="slide__figure slide__figure--box" data-sort="2">
-						<div class="slide__figure-img" style="background-image: url(img/edgetech.jpg); width: 500px;">
+						<div class="slide__figure-img" style="background-image: url(img/edgetech.jpg);">
 
 						</div>
 					</div>
@@ -116,19 +120,19 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 					<button class="slide__back" data-hover>
 						<svg class="icon icon--back"><use xlink:href="#icon-arrow"></use></svg><p>Regresar</p>
 					</button>
-					<div class="slide__content">
-						<h3>Mis Proyectos</h3>
+					<div class="slide__content jobs">
+						<h3 class="jobs_colabs">Mis Proyectos</h3>
 							<div>
-								<img href="http://bravoanimal.com/" target="_blank"class="eb" src="img/jobs/Negativo-Bravo.jpg" alt="">
+								<img href="http://bravoanimal.com/" target="_blank"class="eb" src="img/jobs/Negativo-Bravo.jpg" alt="Bravo Animal">
 								<a href="#" > <img src="img/jobs/logosal.png" alt=""></a>
-								<a href="https://www.faz.com.mx/" target="_blank"> <img src="img/jobs/fazlogo.png" alt=""></a>
+								<a href="https://plandemarca.com/" target="_blank"> <img src="img/jobs/planmarca.png" style="width: 100px;" alt="plan de marca"></a>
 							</div>
 							<div>
 								<a href="https://insubordinadas.com/" target="_blank"> <img src="img/jobs/logoinsu.png" alt=""></a>
 								<a href="https://www.webdesignrs.com/" target="_blank"> <img src="img/jobs/logowebd.png" alt=""></a>
 								<a href="http://www.geotem.com.mx/" target="_blank"> <img src="img/jobs/Logogt.png" alt=""></a>
 							</div>
-							<h3>Trabajos y Colaboraciones</h3>
+							<h3 class="jobs_colabs">Trabajos y Colaboraciones</h3>
 							<div>
 								<details class="acordeon">
 									<summary>
@@ -171,8 +175,9 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 										<img data-hover src="img/jobs/logo-ecrit.svg" alt="">↓
 									</summary>
 									<div class="despleg">
-											<p>Desarrollo<br> Feb2020 - Now</p>
-										<!-- <p>- <a data-hover href="https://cuc.edu.mx" target="_blank">Centro universitario de comunicación</a></p> -->
+										<p>Maquetación web<br>Feb2020 - Mayo2020</p>
+										<p>- <a data-hover href="https://editorialcriterio.com/beta/" target="_blank">Grupo Criterio (Beta)</a></p> 
+										<p>- <a data-hover href="#" target="_blank">Colaborcion en Animal Politico, MX y Gourmet</a></p> 
 									</div>
 								</details>
 								<br>
@@ -341,7 +346,7 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 					</div>
 				</div>
 				<!-- Otros -->
-				<div class="slide slide--layout-3" style="background-image:radial-gradient(circle, #13547a, #1e7292, #3891a6, #59b1b7, #80d0c7);">
+				<!-- <div class="slide slide--layout-3" style="background-image:radial-gradient(circle, #13547a, #1e7292, #3891a6, #59b1b7, #80d0c7);">
 					<div class="slide__figure slide__figure--main" data-sort="1">
 						<div class="slide__figure-img" style="background-image: url(img/hardware.jpg)"></div>
 					</div>
@@ -381,6 +386,56 @@ gtag('config', 'UA-151449400-1', { 'optimize_id': 'GTM-593MMBP'});
 								<br>
 								<img class="svgimg" src="img/mainboard.png" alt="My SQL Logo">
 								<p>Soporte Tecnico <br>Instalación de Software <br> Mantenimiento Preventivo </p>
+								<br>
+							</div>
+							<br>
+					</div>
+				</div> -->
+
+
+				<!-- UX -->
+				<div class="slide slide--layout-3" style="background-image:radial-gradient(circle, #13547a, #1e7292, #3891a6, #59b1b7, #80d0c7);">
+					<div class="slide__figure slide__figure--main" data-sort="1">
+						<div class="slide__figure-img" style="background-image: url(img/uxbg1.jpg)"></div> 
+					</div>
+					<div class="slide__figure slide__figure--box" data-sort="2">
+						<div class="slide__figure-img" style="background-image: url(img/uxbg2.jpg)">
+						</div>
+					</div>
+					<div class="slide__figure slide__figure--box" data-sort="3">
+						<div class="slide__figure-img" style="background-image: url(img/mailing.jpg)"></div>
+					</div>
+					<div class="slide__figure slide__figure--box" data-sort="4">
+						<div class="slide__figure-img" style="background-image: url(img/os-mac.jpg)"></div>
+					</div>
+					<h2 class="slide__title">UX</h2>
+					</h2>
+					<div class="slide__text">
+						<p class="slide__text-meta">Investigación, Empatía e Iteracion para una mejor experiecia de usuarios</p>
+						<p class="slide__text-description">“People ignore design that ignores people.”
+								<br>–JFrank Chimero</p>
+						<a class="slide__text-link" data-hover href="#">+<p>Ver más</p></a>
+					</div>
+					<button class="slide__back" data-hover>
+						<svg class="icon icon--back"><use xlink:href="#icon-arrow"></use></svg><p>Regresar</p>
+					</button>
+					<div class="slide__content">
+							<div>
+								<!-- <img src="img/marketing.png" style="width: 100px;" alt="logo mailing">
+								<p>Campañas de email-marketing / Pruebas A/B </p> -->
+								<div style="display: block;">
+									<img class="svgimg" src="img/usabilityh.png" alt="imagen usability hub">
+									<img class="svgimg" src="img/hotjarlogo.png" alt="imagen hotjar">
+								</div>
+								<p>UsabilidadHub & Hotjar</p> 
+								<p>Investigación de Pruebas de Usuario y Usabilidad. Mapas de calor, Funnels y VideoScreen de usuario  </p> 
+							</div>
+							<div>
+								<img src="img/marketing.png" style="width: 100px;" alt="logo mailing">
+								<p>Campañas de email-marketing / Pruebas A/B </p>
+								<br>
+								<!-- <img class="svgimg" src="img/mainboard.png" alt="My SQL Logo">
+								<p>Soporte Tecnico <br>Instalación de Software <br> Mantenimiento Preventivo </p> -->
 								<br>
 							</div>
 							<br>

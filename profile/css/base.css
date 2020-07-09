@@ -691,3 +691,14 @@ svg + p{
 	color:red;
 
 }
+
+
+
+.jobs_colabs{
+	font-size: 3rem;
+	text-decoration: underline;
+	text-align: center;
+}
+.jobs a{
+	color: var(--color-content);
+}
