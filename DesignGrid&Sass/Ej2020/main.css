@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.grid_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 2rem;
+  justify-items: center;
+}
+.grid_content .grid_item {
+  background: rosybrown;
+  padding: 1rem;
+}
+.grid_content .grid_item:hover {
+  border: 1px dashed #6dff6d;
+}
+.grid_content .grid_item_nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 50px;
+  gap: 1em;
+}
+.grid_content .grid_item_nested div {
+  border: 1px solid red;
+  background: yellowgreen;
+}
+.grid_content .grid_item_nested div:first-child {
+  align-self: start;
+}
+.grid_content .grid_item_nested div:nth-child(2) {
+  align-self: center;
+}
+.grid_content .grid_item_nested div:nth-child(3) {
+  align-self: end;
+}
+.grid_content .grid_item_nested div:nth-child(4) {
+  justify-self: start;
+}
+.grid_content .grid_item_nested div:nth-child(5) {
+  justify-self: center;
+}
+.grid_content .grid_item_nested div:nth-child(6) {
+  justify-self: end;
+}
+.grid_content .grid_item_nested .element1 {
+  grid-column: 1/2;
+}
+
+.grid_content2 {
+  height: 100vh;
+  display: grid;
+  grid-template: auto 1fr auto/auto 1fr auto;
+}
+.grid_content2 header {
+  grid-column: 1/4;
+  padding: 2rem;
+  background-color: #8c79b9;
+}
+.grid_content2 .left {
+  background: #eceb9c;
+  grid-column: 1/2;
+}
+.grid_content2 .center {
+  background: #ec9caa;
+  grid-column: 2/3;
+}
+.grid_content2 .right {
+  background: #9cecc4;
+  grid-column: 3/4;
+}
+.grid_content2 footer {
+  background-color: #9ca4ec;
+  grid-column: 1/4;
+}
+.grid_content2 .left,
+.grid_content2 .right {
+  padding: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */
