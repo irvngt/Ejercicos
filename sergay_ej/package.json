@@ -1,0 +1,15 @@
+{
+  "name": "sergay_ej",
+  "version": "1.0.0",
+  "description": "Ejermplo Sergay",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sergey --watch",
+    "start":"sergey"
+  },
+  "author": "irvingmn",
+  "license": "MIT",
+  "dependencies": {
+    "sergey": "0.0.13"
+  }
+}
